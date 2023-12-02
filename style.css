@@ -43,6 +43,7 @@ body{
 }
 
 .tabs{
+    min-width: 320px;
     width: 90vw;
     max-width: 800px;
     display: none;
@@ -54,12 +55,71 @@ body{
     display: block;
 }
 
-h1{
-    margin-top: 40px;
-}
-
 /* ABOUT ME CSS */
 
+#info{
+    margin-top: 20px;
+    background-color: #3f3f3f;
+    display: flex;
+    justify-content: space-around;
+    font-size: 80%;
+}
+
+#links{
+    margin-top: 20px;
+    background-color: #3f3f3f;
+    display: flex;
+    justify-content: space-around;
+}
+
+#info img{
+    margin: auto 0;
+    display: block;
+    width: 120px;
+    height: 160px;
+    flex-grow: 0;
+}
+
+#info h1,h2,h3{
+    font-family: var(--title-font);
+}
+
+#links img{
+    width: 100px;
+}
+
+#links img:hover{
+    cursor: pointer;
+}
+
+/* DISCORD ID COPY  */
+
+#discord-popup-out{
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    width: 99vw;
+    height: 99vh;
+    background-color: transparent;
+}
+
+#discord-popup{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 20vh;
+    background-color: wheat;
+    text-align: center;
+    color: #0f0f0f;
+    font-family: var(--title-font);
+}
+
+#discord-popup img{
+    margin-top: 20px;
+    width: 60px;
+
+}
 
 /* PROJECTS CSS */
 
@@ -151,6 +211,11 @@ h1{
     height: 50px;
     font-weight: bold;
     font-size: 30px;
+}
+
+#admin-add-web button:hover{
+    background-color: #d1cfcc;
+    cursor: pointer;
 }
 
 /* STATS */

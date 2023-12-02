@@ -29,3 +29,18 @@ if (userViewCount){
 }
 
 userViewCountEl.innerText = "Local görüntülenme sayısı: " + userViewCount
+
+//DISCORD COPY
+
+const discordImgEl = document.getElementById("discord-img")
+const discordPopUp = document.getElementById("discord-popup-out")
+
+
+discordImgEl.addEventListener("click", function(){
+    navigator.clipboard.writeText('neuralg');
+    discordPopUp.style.display = "flex"
+})
+
+discordPopUp.addEventListener("click", function(){
+    discordPopUp.style.display = "none"
+})
