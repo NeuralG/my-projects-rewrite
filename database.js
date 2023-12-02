@@ -63,6 +63,14 @@ onValue(webInDB2, function(snapshot) {
 
 //WEBSITES DATABASES PUSH
 
+function clearAll(){
+    userEl.value = ""
+    passEl.value = ""
+    webNameEl.value = ""
+    webLinkEl.value = ""
+    isMyProjectEl = ""
+}
+
 buttonEl.addEventListener("click", function(){
     let name = userEl.value 
     let pass = passEl.value 
@@ -75,15 +83,21 @@ buttonEl.addEventListener("click", function(){
             let webData = [webName,webLink]
             let webDataStringed = webData.toString()
             push(webInDB,webDataStringed)
+            clearAll()
         }
         else{
             let webData = [webName,webLink]
             let webDataStringed = webData.toString()
             push(webInDB2,webDataStringed)
+            clearAll()
         }
     }
     else {
-        alert("Bilgileriniz yanlıştır tekrar deneyiniz")
+        if(name == myName && pass == myPass){
+            alert("Bütün kutucukları doldurup tekrar deneyiniz.")
+        }else{
+            alert("Bilgileriniz yanlıştır tekrar deneyiniz.")
+        }
     }
 })
 
