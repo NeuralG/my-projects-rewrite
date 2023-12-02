@@ -108,11 +108,12 @@ body{
     justify-content: center;
     align-items: center;
     width: 20vw;
-    height: 20vh;
+    height: 25vh;
     background-color: wheat;
     text-align: center;
     color: #0f0f0f;
     font-family: var(--title-font);
+    border-radius: 15px;
 }
 
 #discord-popup img{

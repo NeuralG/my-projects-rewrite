@@ -21,7 +21,7 @@ setInterval(updateTime, 1000)
 const userViewCountEl = document.getElementById("userViewCount")
 let userViewCount = localStorage.getItem("viewCount");
 
-if (userViewCount){
+if (userViewCount !== "null"){
     userViewCount++
     localStorage.setItem("viewCount", userViewCount);
 }else{
