@@ -3,15 +3,15 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Umutcan'ın Projeleri 🔥🔥🔥</title>
+        <title>Umutcan Çetin 🔥🔥🔥</title>
     </head>
     <body>
-        <div id="navbar">
-            <div class="bosluk"></div>
-            <button id="about-me-btn">About Me</button>
-            <button id="projects-btn">My Projects</button>
-            <button id="admin-panel-btn">Admin Panel</button>
-            <div class="bosluk"></div>
+        <div id="navbar-outside">       
+            <div id="navbar">
+                <button id="about-me-btn">Hakkımda</button>
+                <button id="projects-btn">Projelerim</button>
+                <button id="admin-panel-btn">Admin Panel</button>
+            </div>
         </div>
 
         <div id="about-me" class="tabs">
@@ -19,13 +19,40 @@
         </div>
 
         <div id="projects" class="tabs">
-            <h1>Burası Projelerim</h1>
+            <h1>Kendim Yaptığım Siteler</h1>
+            <div id="web-sites"><ul id="web-list"></ul></div>
+            <h1>Katkıda Bulunduğum Siteler</h1>
+            <div id="web-sites2"><ul id="web-list2"></ul></div>
         </div>
 
         <div id="admin-panel" class="tabs">
-            <h1>Burası Admin Panel</h1>
+            <div id="admin-add-web">
+                <h1>Web Sitesi Ekleme</h1>
+                <div>
+                    <input id="website-name" placeholder="web name" style="width: 150px;">
+                    <input id="website" placeholder="web link" style="width: 250px;">
+                </div>
+                <div>
+                    <input id="username" placeholder="username" style="width: 150px;">
+                    <input id="password" type="password" placeholder="password" style="width: 150px;">
+                </div>
+                <div>
+                <label for="is-my-project">Proje Sahibi Ben Miyim?</label>
+                <input id="is-my-project" type="checkbox">   
+                </div>
+                <button id="button">Submit!</button>
+            </div>
+
+            <div id="stats">
+                <h1>İstatistikler</h1>
+                <p id="viewCount"></p>
+                <p id="userViewCount"></p>
+                <p id="currentDate"></p>
+            </div>
+
         </div>
     </body>
-    <script src="script.js" type="module"></script>
+    <script src="database.js" type="module"></script>
     <script src="tabs.js" type="module"></script>
+    <script src="script.js" type="module"></script>
 </html>
