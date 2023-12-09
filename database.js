@@ -30,6 +30,7 @@ const webListEl2 = document.getElementById("web-list2")
 onValue(webInDB, function(snapshot) {
     if (snapshot.exists()) {
         let itemsArray = Object.values(snapshot.val())
+        itemsArray = itemsArray.reverse() //NEWEST FİRST :3
         webListEl.innerHTML = ""
         for (let i = 0; i < itemsArray.length; i++) {
             let currentItem = itemsArray[i]
