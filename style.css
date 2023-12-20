@@ -176,14 +176,16 @@ body{
 
 .web-link-popup{
     margin: 0;
+    padding: 0;
+    outline: 30px solid rgb(196, 75, 75);
+    border-radius: 10%;
     display: none;
     overflow: hidden;
-    width: 80vw;
-    height: 80vh;
-    transform: scale(0.2) translateY(-250vh) translateX(-220vw);
+    width: 1366px;
+    height: 768px;
     z-index: 100;
     position: absolute;
-
+    transform: scale(0.15) translateY(-400%) translateX(-380%);
 }
 
 /* ADMİN PANEL CSS */
