@@ -136,26 +136,33 @@ onValue(viewCountInDB, function(snapshot){
 
 //HOVER PREVIEW 
 
-let widthBrowser = window.innerWidth //check if its desktop or not
+let isItDesktop = window.matchMedia("(min-width: 1100px)")
 
-if (widthBrowser > 992){
+function disableEnableListeners(mediaQuery){
     setTimeout(()=>{
-        const webLinks = document.getElementsByClassName("webLink")
+        let webLinks = document.getElementsByClassName("webLink")
         for (let i=0;i<webLinks.length;i++){
-            webLinks[i].addEventListener("mouseover", ()=>{
-            document.getElementById(`web-link${i}`).style.display = "inline"
-        })
-            webLinks[i].addEventListener("mouseout", ()=>{
-            document.getElementById(`web-link${i}`).style.display = "none"
-            })
-    
-    
-    }
+            if(mediaQuery.matches){
+                webLinks[i].addEventListener("mouseover",function display(){
+                    document.getElementById(`web-link${i}`).style.display = "inline"
+                })
+                webLinks[i].addEventListener("mouseout",function destroy(){
+                    document.getElementById(`web-link${i}`).style.display = "none"
+                })
+            }else{
+                webLinks[i].replaceWith(webLinks[i].cloneNode(true));       
+                document.getElementById(`web-link${i}`).style.display = "none"         
+            }
+        }
     },1000)
+    
 }
-else{
-    for (frame in window.frames){
-        frame.src = "none"
-    }
-}
+
+disableEnableListeners(isItDesktop)
+
+
+isItDesktop.addEventListener("change", function(){
+    disableEnableListeners(isItDesktop)
+})
+
 
