@@ -40,7 +40,7 @@ onValue(webInDB, function(snapshot) {
             let currentLink = myObject[1]
             webListEl.innerHTML += `<li>
             <a class="webLink" href="https://${currentLink}" target="_blank">${currentName}
-            <iframe class="web-link-popup" id="web-link${i}" src="https://${currentLink}"></iframe>
+            <iframe sandbox="allow-scripts" class="web-link-popup" id="web-link${i}" src="https://${currentLink}"></iframe>
             </a>
             </li>`
         }
@@ -63,7 +63,7 @@ onValue(webInDB2, function(snapshot) {
             let currentLink = myObject[1]
             webListEl2.innerHTML += `<li>
             <a class="webLink" href="https://${currentLink}" target="_blank">${currentName}
-            <iframe class="web-link-popup" id="web-link${i+databaseLengthFirst}" src="https://${currentLink}"></iframe>
+            <iframe sandbox="allow-scripts" class="web-link-popup" id="web-link${i+databaseLengthFirst}" src="https://${currentLink}"></iframe>
             </a>
             </li>`
         }    
