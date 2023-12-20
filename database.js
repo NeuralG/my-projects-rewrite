@@ -153,4 +153,9 @@ if (widthBrowser > 992){
     }
     },1000)
 }
+else{
+    for (frame in window.frames){
+        frame.src = "none"
+    }
+}
 

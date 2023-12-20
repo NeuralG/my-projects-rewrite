@@ -44,3 +44,4 @@ discordImgEl.addEventListener("click", function(){
 discordPopUp.addEventListener("click", function(){
     discordPopUp.style.display = "none"
 })
+

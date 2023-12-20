@@ -18,17 +18,16 @@ body{
 
 #navbar-outside{
     background-color:#3f3f3f;
-    height: 60px;
     width: 100vw;
 }
 
 #navbar{
     margin: 0 auto;
-    height: 60px;
-    width: 90vw;
+    height: 100%;
+    width: 100%;
     max-width: 800px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 #navbar button{
@@ -37,6 +36,9 @@ body{
     border: 0;
     font-size: 20px;
     padding: 0;
+    overflow:hidden;
+    padding: 15px;
+
 }
 
 #navbar button:hover{
@@ -63,7 +65,7 @@ body{
     background-color: #3f3f3f;
     display: flex;
     justify-content: space-around;
-    font-size: 80%;
+    font-size: 65%;
 }
 
 #links{
@@ -72,22 +74,27 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 #info img{
     margin: auto 0;
     display: block;
-    width: 120px;
-    height: 160px;
+    width: 111px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 148px;
     flex-shrink: 0;
 }
 
 #info h1,h2,h3{
     font-family: var(--title-font);
+    text-wrap: wrap;
 }
 
+
 #links img{
-    width: 100px;
+    width: 60px;
 }
 
 #links img:hover{
@@ -192,44 +199,60 @@ body{
 
 /* ADD WEBSİTE */
 
-#admin-add-web h1{
-    margin-top: 5px;
-    font-family: var(--title-font);
-}
-
 #admin-add-web{
+    margin: auto;
     margin-top: 20px;
     background-color: #3f3f3f;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex-grow: 0;
     flex-wrap: wrap;
 }
 
-#admin-add-web input{
+#admin-add-web h1{
+    text-wrap: wrap;
+    margin-top: 5px;
+    font-family: var(--title-font);
+}
+
+#admin-add-web input:not(:last-child){
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 0;
-    padding: 20px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
 #admin-add-web label{
-    font-size: 30px;
+    padding: 0;
+    user-select: none;
+    font-size: 20px;
     font-family: var(--title-font);
     text-wrap: balance;
 }
 
-#is-my-project{
-    width: 30px;
-    height: 20px;
+#admin-add-web label:hover{
+    cursor: pointer;
 }
+
+#is-my-project{
+    margin: 7.27px 0 0 0 ;
+    width: 50%;
+    text-align: center;
+}
+
+#is-my-project:hover{
+    cursor: pointer;
+    background-color: #3f3f3f;
+}
+
 #admin-add-web button{
     background-color: #f1f1ea;
     border: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     width: 200px;
     height: 50px;
     font-weight: bold;
@@ -239,6 +262,11 @@ body{
 #admin-add-web button:hover{
     background-color: #d1cfcc;
     cursor: pointer;
+}
+
+#labels{
+    display: flex;
+    margin-bottom: 20px;
 }
 
 /* STATS */
@@ -255,10 +283,119 @@ body{
 }
 
 #stats p{
-    font-size: 40px;
+    font-size: 20px;
     color: red;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-bottom: 20px;
     margin-block: 0;
     margin: 10px;
+}
+
+/*  MEDIA QUERIES */
+
+@media (max-width: 550px){
+    #navbar button:not(:last-child){
+        border-bottom: dotted 0.1px white;
+    }
+    #projects a{
+        font-size: 15px;
+    }
+}
+@media (min-width: 550.01px) and (max-width:700px){
+    #navbar button:not(:last-child){
+        border-bottom: dotted 0.1px white;
+    }
+    #navbar button{
+        font-size: 27px;
+    }
+    #info img{
+        width: 120px;
+        height: 160px;
+    }
+    #info{
+        font-size: 75%;
+    }
+    #links img{
+        width: 70px;
+    }
+    #projects a{
+        font-size: 18px;
+    }
+    #stats p{
+        font-size: 25px;
+    }
+    #admin-add-web label{
+        font-size: 22px;
+    }
+    #labels{
+        display: inline-flex;
+        width: 40%;
+        margin-right: auto;
+        margin-left: 5%;
+    }
+    #button{
+        display: inline;
+        width: 40%;
+        margin-left: auto;
+        margin-right: 10%;
+        margin-top: -63px;
+    }
+}
+@media (min-width: 700px){
+    #navbar{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #navbar button{
+        padding: 20px 0px 20px 0px;
+        font-size: 30px;
+    }
+    #info img{
+        width: 150px;
+        height: 200px;
+    }
+    #info{
+        font-size: 90%;
+    }
+    #links img{
+        width: 100px;
+        /* do something better*/
+    }
+    #projects a{
+        font-size: 22px;
+    }
+    #stats p{
+        font-size: 35px;
+    }
+    #admin-add-web > #username{
+        width: 35%;
+        flex-grow: 0;
+        margin-right: auto;
+        margin-left: 10%;
+    }
+    #admin-add-web > #password{
+        width: 35%;
+        margin-top: -63px;
+        flex-grow: 0;
+        margin-right: 10%;
+        margin-left: auto;
+    }
+
+
+    #labels{
+        display: inline-flex;
+        width: 40%;
+        margin-right: auto;
+        margin-left: 5%;
+    }
+    #button{
+        display: inline;
+        width: 40%;
+        margin-left: auto;
+        margin-right: 10%;
+        margin-top: -70px;
+    }
+}
+@media (min-width: 1100.01px){
+    /* ADD DESKTOP HERE  */
 }
