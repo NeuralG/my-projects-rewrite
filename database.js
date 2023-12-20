@@ -26,6 +26,7 @@ const webListEl = document.getElementById("web-list")
 const webListEl2 = document.getElementById("web-list2")
 
 //WEBSITE DATABASE 1
+let databaseLengthFirst = 0
 
 onValue(webInDB, function(snapshot) {
     if (snapshot.exists()) {
@@ -37,8 +38,13 @@ onValue(webInDB, function(snapshot) {
             let myObject = currentItem.split(",")
             let currentName = myObject[0]
             let currentLink = myObject[1]
-            webListEl.innerHTML += `<li><a href="https://${currentLink}" target="_blank">${currentName}</a></li>`
-        }    
+            webListEl.innerHTML += `<li>
+            <a class="webLink" href="https://${currentLink}" target="_blank">${currentName}
+            <iframe class="web-link-popup" id="web-link${i}" src="https://${currentLink}"></iframe>
+            </a>
+            </li>`
+        }
+        databaseLengthFirst = itemsArray.length
     } else {
         webListEl.innerHTML = "No items here... yet"
     }
@@ -55,7 +61,11 @@ onValue(webInDB2, function(snapshot) {
             let myObject = currentItem.split(",")
             let currentName = myObject[0]
             let currentLink = myObject[1]
-            webListEl2  .innerHTML += `<li><a href="https://${currentLink}" target="_blank">${currentName}</a></li>`
+            webListEl2.innerHTML += `<li>
+            <a class="webLink" href="https://${currentLink}" target="_blank">${currentName}
+            <iframe class="web-link-popup" id="web-link${i+databaseLengthFirst}" src="https://${currentLink}"></iframe>
+            </a>
+            </li>`
         }    
     } else {
         webListEl2.innerHTML = "No items here... yet"
@@ -123,3 +133,24 @@ onValue(viewCountInDB, function(snapshot){
 },{
     onlyOnce: true
 })
+
+//HOVER PREVIEW 
+
+let widthBrowser = window.innerWidth //check if its desktop or not
+
+if (widthBrowser > 992){
+    setTimeout(()=>{
+        const webLinks = document.getElementsByClassName("webLink")
+        for (let i=0;i<webLinks.length;i++){
+            webLinks[i].addEventListener("mouseover", ()=>{
+            document.getElementById(`web-link${i}`).style.display = "inline"
+        })
+            webLinks[i].addEventListener("mouseout", ()=>{
+            document.getElementById(`web-link${i}`).style.display = "none"
+            })
+    
+    
+    }
+    },1000)
+}
+
