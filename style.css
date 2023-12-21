@@ -92,6 +92,9 @@ body{
     text-wrap: wrap;
 }
 
+#info h1:hover,h2:hover,h3:hover{
+    color: rgb(210, 203, 203);
+}
 
 #links img{
     width: 60px;
@@ -348,7 +351,7 @@ body{
     }
     #navbar button{
         padding: 20px 0px 20px 0px;
-        font-size: 30px;
+        font-size: 25px;
     }
     #info img{
         width: 150px;
@@ -379,20 +382,18 @@ body{
         margin-right: 10%;
         margin-left: auto;
     }
-
-
-    #labels{
+    #admin-add-web #labels{
         display: inline-flex;
-        width: 40%;
+        width: 35%;
         margin-right: auto;
-        margin-left: 5%;
+        margin-left: 10%;
     }
-    #button{
+    #admin-add-web #button{
         display: inline;
-        width: 40%;
+        width: 35%;
         margin-left: auto;
         margin-right: 10%;
-        margin-top: -70px;
+        margin-top: -65px;
     }
 }
 @media (min-width: 1100.01px){
@@ -420,18 +421,17 @@ body{
         margin-right: 10%;
         margin-left: auto;
     }
-    #labels{
-        display: inline-flex;
-        width: 40%;
+    #admin-add-web #labels{
+        width: 35%;
         margin-right: auto;
-        margin-left: 5%;
+        margin-left: 10%;
     }
-    #button{
+    #admin-add-web #button{
         display: inline;
-        width: 40%;
+        width: 172.27px;
         margin-left: auto;
         margin-right: 10%;
-        margin-top: -70px;
+        margin-top: -65px;
     }
     #navbar{
         max-width: 1200px;
@@ -460,7 +460,7 @@ body{
         grid-template-rows: 1fr 1fr 1fr 1fr;
     }
     #links::before{
-        content: "LINKS";
+        content: "LINKLER";
         grid-column: 1/3;
         font-size: 30px;
         font-family: var(--title-font);

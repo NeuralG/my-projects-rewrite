@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Umutcan Çetin 🔥🔥🔥</title>
-
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -12,74 +11,65 @@
         <meta name="google-site-verification" content="HZS1BD-6OdlRNGQ-X3cR1qIc4d1yFhjAzxkb7ZYlmxo" />
     </head>
     <body>
-
         <div id="discord-popup-out">
             <div id="discord-popup">
                 <img src="images/approved.png">
                 <h1>Username başarıyla kopyalandı</h1>
             </div>
         </div>
-
-        <div id="navbar-outside">       
+        <div id="navbar-outside">
             <div id="navbar">
-                <button id="about-me-btn">Hakkımda</button>
+                <button id="about-me-btn">Umutcan Çetin</button>
                 <button id="projects-btn">Projeler</button>
-                <button id="admin-panel-btn">Admin Panel</button>
+                <button id="admin-panel-btn">İstatistikler/Admin Panel</button>
             </div>
         </div>
-
         <div id="about-me" class="tabs">
-            <div id="info"> 
-                <img src="/images/umccetin.jpg">
+            <div id="info">
+                <img alt="A picture of Umutcan" src="/images/umccetin.jpg">
                 <div>
                     <h1>Umutcan Çetin</h1>
                     <h2>Kocaeli/Gebze</h2>
                     <h2>Full-Stack Web Developer</h2>
                     <h3>HTML, CSS, Javascript, Firebase, React</h3>
-                    <h3>Gebze Teknik Bilgisayar Mühendisliği</h2>
+                    <h3>Gebze Teknik Bilgisayar Mühendisliği</h3>
                     <h3>Hazırlık Sınıfı</h3>
-                    
                 </div>
             </div>
             <div id="links">
                 <a href="https://github.com/NeuralG" target="_blank"><img src="images/github.png"></a>
-                <img id="discord-img" src="images/discord.png">
+                <img tabindex="0" id="discord-img" src="images/discord.png">
             </div>
         </div>
-
         <div id="projects" class="tabs">
             <h1>Kendim Yaptığım Siteler</h1>
-            <div id="web-sites"><ul id="web-list"></ul></div>
+            <div id="web-sites">
+                <ul id="web-list"></ul>
+            </div>
             <h1>Katkıda Bulunduğum Siteler</h1>
-            <div id="web-sites2"><ul id="web-list2"></ul></div>
+            <div id="web-sites2">
+                <ul id="web-list2"></ul>
+            </div>
         </div>
-
         <div id="admin-panel" class="tabs">
-
             <div id="stats">
                 <h1>İstatistikler</h1>
                 <p id="viewCount"></p>
                 <p id="userViewCount"></p>
                 <p id="currentDate"></p>
             </div>
-
             <div id="admin-add-web">
                 <h1>Web Sitesi Ekleme</h1>
-                
                 <input id="website-name" placeholder="web name">
                 <input id="website" placeholder="web link">
-                
-                
                 <input id="username" placeholder="username">
                 <input id="password" type="password" placeholder="password">
-                
                 <div id="labels">
-                <label for="is-my-project">Proje Sahibi Ben Miyim?</label>
-                <input id="is-my-project" type="checkbox">   
+                    <label for="is-my-project">Proje Sahibi Ben Miyim?</label>
+                    <input id="is-my-project" type="checkbox">   
                 </div>
                 <button id="button">Submit!</button>
             </div>
-
         </div>
     </body>
     <script src="database.js" type="module"></script>
