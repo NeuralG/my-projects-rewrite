@@ -341,7 +341,7 @@ body{
         margin-top: -63px;
     }
 }
-@media (min-width: 700px) and (max-width:1100){
+@media (min-width: 700px) and (max-width:1100px){
     #navbar{
         flex-direction: row;
         justify-content: space-around;
