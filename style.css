@@ -341,7 +341,7 @@ body{
         margin-top: -63px;
     }
 }
-@media (min-width: 700px){
+@media (min-width: 700px) and (max-width:1100){
     #navbar{
         flex-direction: row;
         justify-content: space-around;
@@ -359,7 +359,6 @@ body{
     }
     #links img{
         width: 100px;
-        /* do something better*/
     }
     #projects a{
         font-size: 22px;
@@ -397,5 +396,106 @@ body{
     }
 }
 @media (min-width: 1100.01px){
-    /* ADD DESKTOP HERE  */
+    #navbar button{
+        padding: 20px 0px 20px 0px;
+        font-size: 30px;
+    }
+    #info img{
+        width: 150px;
+        height: 200px;
+    }
+    #stats p{
+        font-size: 35px;
+    }
+    #admin-add-web > #username{
+        width: 35%;
+        flex-grow: 0;
+        margin-right: auto;
+        margin-left: 10%;
+    }
+    #admin-add-web > #password{
+        width: 35%;
+        margin-top: -63px;
+        flex-grow: 0;
+        margin-right: 10%;
+        margin-left: auto;
+    }
+    #labels{
+        display: inline-flex;
+        width: 40%;
+        margin-right: auto;
+        margin-left: 5%;
+    }
+    #button{
+        display: inline;
+        width: 40%;
+        margin-left: auto;
+        margin-right: 10%;
+        margin-top: -70px;
+    }
+    #navbar{
+        max-width: 1200px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    html > body > .tabs{
+        max-width: 1000px;
+    }
+    html > body > #about-me{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap:30px;
+        max-width: 1000px;
+    }
+    #info{
+       flex-grow: 0;
+       width: 800px;
+       font-size: 90%;
+    }
+    #links{
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    #links::before{
+        content: "LINKS";
+        grid-column: 1/3;
+        font-size: 30px;
+        font-family: var(--title-font);
+        font-weight: bold;
+        align-self: center;
+    }
+    #links > *{
+        margin: auto;
+    }
+    #links img{
+        width: 40px;
+        height: 40px;
+    }
+    /* GRID */
+    #projects ul{
+        gap:25px;
+    }
+    #projects a{
+        padding:10px 20px;
+        font-size: 30px;
+    }
+    #admin-panel{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #stats{
+        width: 40%;
+        margin-inline: auto;
+        margin-top: 20px;
+    }
+    #admin-add-web{
+        margin-inline: auto;
+        margin-top: 20px;
+        height: auto;
+        width: 50%;
+        height:fit-content;
+    }
 }

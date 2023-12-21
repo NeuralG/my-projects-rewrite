@@ -14,8 +14,10 @@ const hoveredColor = selectedColor
 
 aboutMeBtn.style.color = selectedColor
 
+adminPanelEl.style.display = "none"
+
 aboutMeBtn.addEventListener("click", function(){
-    aboutMeEl.style.display = "block"
+    aboutMeEl.style.display = window.matchMedia("(min-width: 1100px)").matches ? "flex" : "block"
     aboutMeBtn.style.color = selectedColor
     projectsEl.style.display = "none"
     projectsBtn.style.color = nonSelectedColor
@@ -37,7 +39,15 @@ adminPanelBtn.addEventListener("click", function(){
     aboutMeBtn.style.color = nonSelectedColor
     projectsEl.style.display = "none"
     projectsBtn.style.color = nonSelectedColor
-    adminPanelEl.style.display = "block"
+    adminPanelEl.style.display = window.matchMedia("(min-width: 1100px)").matches ? "flex" : "block"
     adminPanelBtn.style.color = selectedColor
 })
 
+window.matchMedia("(min-width: 1100px)").addEventListener("change", function(){
+    if (aboutMeEl.style.display != "none"){
+        aboutMeEl.style.display = window.matchMedia("(min-width: 1100px)").matches ? "flex" : "block"
+    }
+    if (adminPanelEl.style.display != "none"){
+        adminPanelEl.style.display = window.matchMedia("(min-width: 1100px)").matches ? "flex" : "block"
+    }
+})
